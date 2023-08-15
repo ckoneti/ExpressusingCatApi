@@ -26,7 +26,7 @@ return res.status(400).json({ error: 'Error fetching'});
 const addImage = async(req:Request, res:Response)=>{
 try{
 var formData = new FormData();
-formData.append('file', fs.createReadStream('C:/Users/The Durga/Desktop/myImage.jpg'))
+formData.append('file', fs.createReadStream('C:/Users/Your_Folder_Name/Desktop/ImageName.jpg'))
 const { data,status } = await axios.post(`${process.env.CAT_API_UR}L/upload}`, formData , {
       headers: {
         'x-api-key': process.env.CAT_API_KEY,
